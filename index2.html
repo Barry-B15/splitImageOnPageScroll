@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Qahiri&family=Zen+Tokyo+Zoo&display=swap');
+        /* 1 */
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* 2 */
+        
+        body {
+            background: #111;
+            min-height: 200vh;
+        }
+        /* 6 */
+        
+        section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        /* 8 */
+        
+        section .side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* 9 */
+        
+        section .side#left {
+            /* select the best margin-top to fit  at .content */
+            clip-path: polygon(53% 0, 0 0, 0 100%, 55% 100%);
+            /* clip-path: polygon(0% 0%, 44% 0, 60% 51%, 44% 100%, 0% 100%); */
+            /* clip-path: circle(49.5% at 50% 50%); */
+            clip-path: circle(74.5% at 2% 2%);
+            /* clip-path: polygon(100% 35%, 100% 0, 0 0, 0 73%); */
+            /* clip-path: polygon(100% 51%, 100% 0, 0 0, 0 52%); */
+            /* clip-path: polygon(68% 0, 50% 51%, 70% 100%, 0 100%, 0% 50%, 0 0); */
+            /* clip-path: polygon(64% 0, 44% 53%, 60% 100%, 0 100%, 0% 50%, 0 0); */
+            /* clip-path: polygon(74% 25%, 100% 0, 0 0, 0 52%, 0 80%, 0 100%, 31% 81%, 38% 57%, 67% 50%); */
+            /* clip-path: polygon(62% 12%, 78% 0, 0 0, 0 23%, 0 64%, 0 100%, 30% 79%, 41% 51%, 64% 38%); */
+            clip-path: polygon(100% 0, 0% 100%, 0 0);
+            clip-path: polygon(54% 33%, 70% 16%, 68% 0, 0 0, 0 100%, 24% 100%, 39% 81%, 38% 64%, 54% 50%);
+        }
+        /* 10 */
+        
+        section .side#right {
+            /* select the best margin-top to fit  at .content */
+            clip-path: polygon(53% 0, 100% 0, 100% 100%, 55% 100%);
+            /* clip-path: polygon(100% 0, 44% 0, 60% 51%, 44% 100%, 100% 100%); */
+            /* clip-path: circle(49.5% at 50% 50%); */
+            clip-path: circle(74.5% at 98% 99%);
+            /* clip-path: polygon(100% 35%, 99% 100%, 0 100%, 0 73%); */
+            /* clip-path: polygon(100% 51%, 100% 100%, 0 100%, 0 52%); */
+            /* clip-path: polygon(100% 0, 100% 50%, 100% 100%, 33% 99%, 48% 50%, 33% 0); */
+            /* clip-path: polygon(100% 0, 100% 50%, 100% 100%, 30% 100%, 44% 53%, 29% 0); */
+            /* clip-path: polygon(74% 25%, 100% 0, 100% 26%, 100% 67%, 100% 100%, 0 100%, 31% 81%, 38% 57%, 67% 50%); */
+            /* clip-path: polygon(62% 12%, 78% 0, 100% 0, 100% 27%, 100% 100%, 0 100%, 30% 79%, 41% 51%, 64% 38%); */
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            clip-path: polygon(54% 33%, 70% 16%, 68% 0, 100% 0, 100% 100%, 24% 100%, 39% 81%, 38% 64%, 54% 50%);
+        }
+        /* 7 */
+        
+        section .side img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 3 */
+        
+        .content {
+            color: aliceblue;
+            padding: 2em;
+            /* use one of the ff margins for the splits in left/right codes */
+            margin-top: 120vh;
+            /* margin-top: 165vh; */
+            /* margin-top: 200vh; */
+        }
+        /* 4 */
+        
+        .content h2 {
+            font-family: 'Zen Tokyo Zoo', cursive;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: .5em;
+            color: goldenrod;
+        }
+        /* 5 */
+        
+        .content p {
+            font-size: 1.2em;
+            width: 65ch;
+            margin: auto;
+            color: beige;
+        }
+        
+        .content p::first-line {
+            color: greenyellow;
+            font-family: 'Qahiri', sans-serif;
+            font-size: 2em;
+        }
+        
+        h3 {
+            color: blanchedalmond;
+            position: absolute;
+            top: 90%;
+            left: 40%;
+            z-index: 10000;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="side" id="left">
+            <img src="images/beach-15.jpg" alt="beach">
+        </div>
+        <div class="side" id="right">
+            <img src="images/beach-15.jpg" alt="beach">
+        </div>
+
+    </section>
+    <div class="content">
+        <h2>Open Curtain On Page Scroll</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+    </div>
+    <h3>Scroll down to see the Magic</h3>
+    <!-- 11 -->
+    <script>
+        let left = document.getElementById('left');
+        let right = document.getElementById('right');
+
+        window.addEventListener('scroll', function() {
+            left.style.left = -window.pageYOffset + 'px';
+            right.style.left = window.pageYOffset + 'px';
+
+        })
+    </script>
+</body>
+<!-- image source: pixabay -->
+
+</html>
