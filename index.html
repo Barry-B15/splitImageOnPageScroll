@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Video | HTML CSS JS</title>
+    <style>
+        /* 1 */
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* 2 */
+        
+        body {
+            background: #222;
+            min-height: 200vh;
+        }
+        /* 6 */
+        
+        section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        /* 8 */
+        
+        section .side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* google clip path maker:
+        https://bennettfeely.com/clippy/ 
+        -drag the to pyramid top to 0 left to form a triangle
+        - copy the path
+        - paste here
+        - comment out #side2
+        - see in browser 
+        - Uncomment #side2
+        - Go back to the clip path page 
+        - drag the bottom left angle to the top right angle
+        - copy the path and paste in .side#side2 below
+        - comment #side1 and see the look in the browser
+        - uncomment #side1
+        - go do the js section
+        */
+        /* 9 */
+        
+        section .side#side1 {
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+        /* 10 */
+        
+        section .side#side2 {
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+        /* 7 */
+        /* I added img tag to the html and included it here; awesome */
+        
+        section .side img,
+        section .side video {
+            /*  */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* 3 */
+        
+        .content {
+            color: oldlace;
+            padding: 50px;
+            /* 12 */
+            margin-top: 150vh;
+        }
+        /* 4 */
+        
+        .content h2 {
+            font-size: 3em;
+            /* below: mine */
+            text-align: center;
+            margin-bottom: 1rem;
+            color: goldenrod;
+        }
+        /* 5 */
+        
+        .content p {
+            font-size: 1.2em;
+            /* below: mine */
+            width: 80ch;
+            margin: auto;
+            /* align-items: center; */
+        }
+        /* below: mine */
+        /*  */
+        
+        h1 {
+            color: blanchedalmond;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            z-index: 10000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Scroll down to see the Magic</h1>
+    <section>
+        <div class="side" id="side1">
+            <video src="images/bg2.mp4" type="video/mp4" autoplay loop muted></video>
+            <!-- <img src="images/castle-1.jpg" alt="beach"> -->
+        </div>
+        <div class="side" id="side2">
+            <video src="images/bg2.mp4" type="video/mp4" autoplay loop muted></video>
+            <!-- <img src="images/castle-1.jpg" alt="beach"> -->
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split Video On Page Scroll</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium accusamus corrupti optio debitis a veritatis, recusandae harum alias vel atque, natus non temporibus facilis nam itaque aspernatur mollitia. Id omnis sequi eaque ipsum aliquid
+            ducimus dicta. Distinctio tempora quia sequi eaque voluptate doloremque nulla voluptatibus exercitationem dolore amet explicabo officiis expedita quibusdam deleniti, dolores facere eius! Voluptates praesentium fuga illum commodi nesciunt ad
+            optio. Temporibus hic voluptates eaque quisquam ducimus veniam fugit expedita ipsum eveniet, cupiditate facilis et, aut quia provident inventore modi minima at laborum. Molestias quasi ipsum, amet explicabo totam possimus fugiat quibusdam
+            cupiditate, deserunt quaerat, quod reprehenderit?</p>
+    </div>
+    <!-- 11 -->
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll', function() {
+            side1.style.left = -window.pageYOffset + 'px';
+            side2.style.left = window.pageYOffset + 'px';
+
+        })
+    </script>
+    <!-- Video source: pexel.com
+        video by Taryn Elliott from Pexels 
+    
+        Youtube: https://youtu.be/bzZuOcyZ-Gw
+    -->
+</body>
+
+
+</html>
